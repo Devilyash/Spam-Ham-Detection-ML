@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css"  href="static/styles.css">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="header_right">
+				<div class="nav_heading">
+					<h1>Spam Detector for Email/SMS</h1>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="body">
+	<div class="night">
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+	</div>
+
+	<div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+			<p>Paste Your Message/Mail Here which you want to predict Spam or Not(Ham)<p>
+			<textarea name="message" rows="7" cols="80"></textarea>
+			<br/>
+			<input type="Submit" class="btn-info glow-on-hover" value="Predict">
+		</form>
+	</div>
+	</div>
+
+</body>
+</html>

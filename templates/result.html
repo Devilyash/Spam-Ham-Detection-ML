@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css"  href="static/styles.css">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="header_right">
+				<div class="nav_heading">
+					<h1>Spam Detector for Email/SMS</h1>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="body">
+	<div class="night">
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+	</div>
+
+	<div class="result-container">
+		<div class="results1">
+			{% if prediction == 1%}
+			<h2 style="color:red;">Spam</h2>
+			{% elif prediction == 0%}
+			<h2 style="color:green;">Hurrey! your messsage is not spam</h2>
+			{% endif %}
+		</div>
+		<div class="results2">
+			<form action="{{ url_for('back')}}" method="POST">
+			<input type="Submit" class="btn-info glow-on-hover" value="Back">
+			</form>
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>
+	
+	
+
+	<div>
+		<form action="{{ url_for('back')}}" method="POST">
+		<input type="Submit" class="btn-info" value="Back">
+		</form>
+	</div>
+
+</body>
+</html>
