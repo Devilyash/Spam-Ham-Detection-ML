@@ -12,3 +12,4 @@ pandas>=0.19
 nltk>=3.5
 wordnet
 reuters
+you also require some brain
